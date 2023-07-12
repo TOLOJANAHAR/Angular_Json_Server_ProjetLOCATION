@@ -1,0 +1,34 @@
+<div class="p-3 ">
+   <div class="card">
+      <div class="card-body ">
+         <div class="row ">
+            <div class="col-md-6 ">
+               <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+                  <div class="mb-3">
+                     <label class="form-label">Numéro de location</label>
+                     <input class="form-control" formControlName="id">
+                  </div> 
+                  <div class="mb-3">
+                     <label class="form-label">Nom du locateur</label>
+                     <input class="form-control" formControlName="nomLoc">
+                  </div>
+                  <div class="mb-3">
+                     <label class="form-label">Design de la voiture</label>
+                     <input class="form-control" formControlName="designVoiture">
+                  </div>
+                  <div class="mb-3">
+                     <label class="form-label">Nombre de jour</label>
+                     <input class="form-control" formControlName="jour">
+                  </div>
+                  <div class="mb-3">
+                     <label class="form-label">Taux journaliere</label>
+                     <input class="form-control" formControlName="tauxJournalier">
+                  </div>
+                  <button class="btn btn-success"> Enregistrer</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+ 

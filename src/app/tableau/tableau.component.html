@@ -1,0 +1,40 @@
+<div class="p-3">
+   <div class="card">
+      <div class="card-body">
+         <table class="table">
+            <thead>
+               <tr>
+                  <th>Nom Location</th>
+                  <th>Design Voiture</th>
+                  <th>Nombre de jour</th>
+                  <th>Taux journalier</th>
+                  <th>Loyer</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let product of products">
+                  <td><input type="text" class="form-control" [(ngModel)]="product.nomLoc" [disabled]="!product.editMode"></td>
+                  <td><input type="text"class="form-control" [(ngModel)]="product.designVoiture" [disabled]="!product.editMode"></td>
+                  <td><input type="number" class="form-control"[(ngModel)]="product.jour" [disabled]="!product.editMode"></td>
+                  <td><input type="number" class="form-control"[(ngModel)]="product.tauxJournalier" [disabled]="!product.editMode"></td>
+                  <td>{{product.loyer}}</td>
+                  <td (click)="handleDelete(product)" class="btn btn-danger m-2">
+                     <i class="bi bi-trash"></i>
+                  </td>
+                  <td (click)="toggleEditMode(product)" class="btn btn-success m-2">
+                     <i class="bi bi-pencil"></i>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <label class="form-label m-3"> <b> LOYER TOTAL: {{total}}</b></label> 
+            <label class="form-label m-3">  <b> LOYER Minimal: {{minimum}}</b> </label>
+            <label class="form-label m-3">  <b> LOYER Maximal: {{maximum}}</b> </label>
+         </div>
+         <button class="btn btn-success" (click)="saveChanges()">Enregistrer</button>
+      </div>
+   </div>
+</div>

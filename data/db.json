@@ -1,0 +1,28 @@
+{
+  "caracteristique": [
+    {
+      "id": 3,
+      "nomLoc": "loc3",
+      "designVoiture": "terracan",
+      "jour": 322222,
+      "tauxJournalier": 30000,
+      "editMode": false
+    },
+    {
+      "id": "4",
+      "nomLoc": "keke",
+      "designVoiture": "qui tue",
+      "jour": 545454,
+      "tauxJournalier": "22222",
+      "editMode": false
+    },
+    {
+      "id": "pYc1P44",
+      "nomLoc": "zz",
+      "designVoiture": "zzz",
+      "jour": "55",
+      "tauxJournalier": "44",
+      "editMode": false
+    }
+  ]
+}
